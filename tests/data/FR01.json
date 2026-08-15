@@ -1,0 +1,134 @@
+[
+  {
+    "testId": "TC01",
+    "description": "Đăng ký thành công với thông tin hợp lệ",
+    "type": "positive",
+    "name": "Nguyen Van A",
+    "email": "valid.user1@domain.com",
+    "password": "Password123!",
+    "confirmPassword": "Password123!",
+    "expectedSuccess": true,
+    "expectedError": ""
+  },
+  {
+    "testId": "TC02",
+    "description": "Đăng ký thất bại khi trường Họ Tên để trống",
+    "type": "negative",
+    "name": "",
+    "email": "valid.user2@domain.com",
+    "password": "Password123!",
+    "confirmPassword": "Password123!",
+    "expectedSuccess": false,
+    "expectedError": "Họ Tên"
+  },
+  {
+    "testId": "TC03",
+    "description": "Đăng ký thất bại khi trường Email để trống",
+    "type": "negative",
+    "name": "Nguyen Van B",
+    "email": "",
+    "password": "Password123!",
+    "confirmPassword": "Password123!",
+    "expectedSuccess": false,
+    "expectedError": "Email"
+  },
+  {
+    "testId": "TC04",
+    "description": "Đăng ký thất bại khi trường Mật khẩu để trống",
+    "type": "negative",
+    "name": "Nguyen Van C",
+    "email": "valid.user3@domain.com",
+    "password": "",
+    "confirmPassword": "",
+    "expectedSuccess": false,
+    "expectedError": "Mật khẩu"
+  },
+  {
+    "testId": "TC05",
+    "description": "Đăng ký thất bại khi email sai định dạng (thiếu @)",
+    "type": "negative",
+    "name": "Nguyen Van D",
+    "email": "invalidemail.com",
+    "password": "Password123!",
+    "confirmPassword": "Password123!",
+    "expectedSuccess": false,
+    "expectedError": "Email"
+  },
+  {
+    "testId": "TC06",
+    "description": "Đăng ký thất bại khi email thiếu phần miền",
+    "type": "negative",
+    "name": "Nguyen Van E",
+    "email": "user@domain",
+    "password": "Password123!",
+    "confirmPassword": "Password123!",
+    "expectedSuccess": false,
+    "expectedError": "Email"
+  },
+  {
+    "testId": "TC07",
+    "description": "Đăng ký thất bại khi Mật khẩu quá ngắn - 7 ký tự (BVA)",
+    "type": "negative",
+    "name": "Nguyen Van F",
+    "email": "valid.user4@domain.com",
+    "password": "Pass12!",
+    "confirmPassword": "Pass12!",
+    "expectedSuccess": false,
+    "expectedError": "yếu"
+  },
+  {
+    "testId": "TC08",
+    "description": "Đăng ký thành công với Mật khẩu vừa đủ độ dài - 8 ký tự (BVA)",
+    "type": "positive",
+    "name": "Nguyen Van G",
+    "email": "valid.user5@domain.com",
+    "password": "Pass123!",
+    "confirmPassword": "Pass123!",
+    "expectedSuccess": true,
+    "expectedError": ""
+  },
+  {
+    "testId": "TC09",
+    "description": "Đăng ký thành công với Mật khẩu dài 9 ký tự (BVA)",
+    "type": "positive",
+    "name": "Nguyen Van H",
+    "email": "valid.user6@domain.com",
+    "password": "Pass1234!",
+    "confirmPassword": "Pass1234!",
+    "expectedSuccess": true,
+    "expectedError": ""
+  },
+  {
+    "testId": "TC10",
+    "description": "Đăng ký thất bại khi Mật khẩu thiếu chữ viết hoa",
+    "type": "negative",
+    "name": "Nguyen Van I",
+    "email": "valid.user7@domain.com",
+    "password": "password123!",
+    "confirmPassword": "password123!",
+    "expectedSuccess": false,
+    "expectedError": "yếu"
+  },
+  {
+    "testId": "TC11",
+    "description": "Đăng ký thất bại khi Mật khẩu thiếu ký tự đặc biệt",
+    "type": "negative",
+    "name": "Nguyen Van J",
+    "email": "valid.user8@domain.com",
+    "password": "Password123",
+    "confirmPassword": "Password123",
+    "expectedSuccess": false,
+    "expectedError": "yếu"
+  },
+  {
+    "testId": "TC12",
+    "description": "Đăng ký thất bại khi Mật khẩu và Xác nhận mật khẩu không khớp",
+    "type": "negative",
+    "name": "Nguyen Van K",
+    "email": "valid.user9@domain.com",
+    "password": "Password123!",
+    "confirmPassword": "Password123??",
+    "expectedSuccess": false,
+    "expectedError": "khớp"
+  }
+]
