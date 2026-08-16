@@ -1,0 +1,88 @@
+[
+  {
+    "testId": "TC01",
+    "description": "Kiểm tra giỏ hàng trống ban đầu",
+    "type": "positive",
+    "expectedEmptyMessage": "Giỏ hàng của bạn đang trống"
+  },
+  {
+    "testId": "TC02",
+    "description": "Thêm một sản phẩm mới vào giỏ hàng thành công",
+    "type": "positive",
+    "productName": "iPhone 15 Pro Max",
+    "quantity": 1
+  },
+  {
+    "testId": "TC03",
+    "description": "Thêm trùng một sản phẩm đã có trong giỏ hàng (kiểm tra gộp dòng)",
+    "type": "positive",
+    "productName": "iPhone 15 Pro Max",
+    "addTimes": 2,
+    "expectedQuantity": 2
+  },
+  {
+    "testId": "TC04",
+    "description": "Thêm sản phẩm với số lượng tối thiểu bằng 1 (BVA)",
+    "type": "positive",
+    "productName": "MacBook Pro M3",
+    "quantity": 1
+  },
+  {
+    "testId": "TC05",
+    "description": "Thêm sản phẩm với số lượng lớn hơn 1",
+    "type": "positive",
+    "productName": "MacBook Pro M3",
+    "quantity": 3
+  },
+  {
+    "testId": "TC06",
+    "description": "Chỉnh sửa tăng số lượng sản phẩm bằng cách nhấn nút '+'",
+    "type": "positive",
+    "productName": "Tai nghe AirPods Pro 2",
+    "action": "increase",
+    "expectedQuantity": 2
+  },
+  {
+    "testId": "TC07",
+    "description": "Chỉnh sửa giảm số lượng sản phẩm bằng cách nhấn nút '-'",
+    "type": "positive",
+    "productName": "Tai nghe AirPods Pro 2",
+    "initialQty": 2,
+    "action": "decrease",
+    "expectedQuantity": 1
+  },
+  {
+    "testId": "TC08",
+    "description": "Kiểm tra nhãn tổng tiền hiển thị chính xác là 'Tổng cộng'",
+    "type": "positive",
+    "productName": "Bàn phím cơ Keychron Q1",
+    "expectedTotalLabel": "Tổng cộng"
+  },
+  {
+    "testId": "TC09",
+    "description": "Xóa sản phẩm và chọn 'Hủy' trên hộp thoại xác nhận",
+    "type": "negative",
+    "productName": "iPhone 15 Pro Max",
+    "confirmAction": "cancel"
+  },
+  {
+    "testId": "TC10",
+    "description": "Xóa sản phẩm và chọn 'Đồng ý' trên hộp thoại xác nhận",
+    "type": "positive",
+    "productName": "iPhone 15 Pro Max",
+    "confirmAction": "accept"
+  },
+  {
+    "testId": "TC11",
+    "description": "Kiểm tra tiêu đề cột của bảng giỏ hàng phải có 'Đơn giá'",
+    "type": "positive",
+    "productName": "iPhone 15 Pro Max",
+    "expectedHeader": "Đơn giá"
+  },
+  {
+    "testId": "TC12",
+    "description": "Kiểm tra nút 'Tiếp tục mua sắm' đưa người dùng quay lại trang chủ",
+    "type": "positive",
+    "expectedUrl": "/"
+  }
+]
