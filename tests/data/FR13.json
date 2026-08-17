@@ -1,0 +1,104 @@
+[
+  {
+    "testId": "TC01",
+    "description": "Xem Dashboard khi chưa có đơn hàng nào",
+    "type": "positive",
+    "orders": [],
+    "expectedRevenue": 0,
+    "expectedOrderCount": 0
+  },
+  {
+    "testId": "TC02",
+    "description": "Xem Dashboard khi chỉ có 1 đơn hàng pending",
+    "type": "positive",
+    "orders": [
+      { "user_id": 2, "total_amount": 100000, "status": "pending", "shipping_address": "123 Le Loi" }
+    ],
+    "expectedRevenue": 0,
+    "expectedOrderCount": 1
+  },
+  {
+    "testId": "TC03",
+    "description": "Xem Dashboard khi chỉ có 1 đơn hàng delivered (đã giao)",
+    "type": "positive",
+    "orders": [
+      { "user_id": 2, "total_amount": 150000, "status": "delivered", "shipping_address": "123 Le Loi" }
+    ],
+    "expectedRevenue": 150000,
+    "expectedOrderCount": 1
+  },
+  {
+    "testId": "TC04",
+    "description": "Xem Dashboard khi có 1 đơn hàng bị hủy (canceled)",
+    "type": "positive",
+    "orders": [
+      { "user_id": 2, "total_amount": 200000, "status": "canceled", "shipping_address": "123 Le Loi" }
+    ],
+    "expectedRevenue": 0,
+    "expectedOrderCount": 1
+  },
+  {
+    "testId": "TC05",
+    "description": "Xem Dashboard khi có nhiều đơn hàng với trạng thái khác nhau",
+    "type": "positive",
+    "orders": [
+      { "user_id": 2, "total_amount": 100000, "status": "delivered", "shipping_address": "123 Le Loi" },
+      { "user_id": 2, "total_amount": 50000, "status": "pending", "shipping_address": "123 Le Loi" },
+      { "user_id": 2, "total_amount": 120000, "status": "canceled", "shipping_address": "123 Le Loi" }
+    ],
+    "expectedRevenue": 100000,
+    "expectedOrderCount": 3
+  },
+  {
+    "testId": "TC06",
+    "description": "Xem Dashboard khi có nhiều đơn hàng đã giao (delivered)",
+    "type": "positive",
+    "orders": [
+      { "user_id": 2, "total_amount": 100000, "status": "delivered", "shipping_address": "123 Le Loi" },
+      { "user_id": 2, "total_amount": 250000, "status": "delivered", "shipping_address": "123 Le Loi" }
+    ],
+    "expectedRevenue": 350000,
+    "expectedOrderCount": 2
+  },
+  {
+    "testId": "TC07",
+    "description": "Kiểm tra nút Đăng xuất hoạt động đúng trên Dashboard",
+    "type": "logout"
+  },
+  {
+    "testId": "TC08",
+    "description": "Kiểm tra visibility tiêu đề chính của Dashboard",
+    "type": "visibility"
+  },
+  {
+    "testId": "TC09",
+    "description": "Đăng nhập admin thành công với thông tin tài khoản hợp lệ",
+    "type": "login",
+    "email": "admin@eshop.com",
+    "password": "Admin123!",
+    "expectedSuccess": true
+  },
+  {
+    "testId": "TC10",
+    "description": "Đăng nhập admin thất bại khi sử dụng tài khoản user thường",
+    "type": "login",
+    "email": "test@eshop.com",
+    "password": "Test1234!",
+    "expectedSuccess": false,
+    "expectedError": "Bạn không phải là admin!"
+  },
+  {
+    "testId": "TC11",
+    "description": "Đăng nhập admin thất bại khi nhập sai mật khẩu",
+    "type": "login",
+    "email": "admin@eshop.com",
+    "password": "wrongpassword",
+    "expectedSuccess": false,
+    "expectedError": "Đăng nhập thất bại"
+  },
+  {
+    "testId": "TC12",
+    "description": "Kiểm tra hộp thống kê Tổng số đơn hàng hiển thị đúng số lượng",
+    "type": "visibility_order_count"
+  }
+]
