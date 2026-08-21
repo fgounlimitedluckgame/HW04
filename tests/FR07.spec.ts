@@ -2,9 +2,8 @@ import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
 
-// Define Student Identity and Timestamp
+// Define Student Identity
 const STUDENT_ID = process.env.STUDENT_ID || '23127108';
-const TIMESTAMP = process.env.TIMESTAMP || new Date().toISOString();
 
 // Load dynamic test data
 const testDataPath = path.join(__dirname, 'data', 'FR07.json');
@@ -35,7 +34,7 @@ async function addProductToCart(page: any, productName: string, quantity: number
   }
 }
 
-test.describe(`FR-07: Giỏ hàng (Shopping Cart) - Run by: ${STUDENT_ID} - [${TIMESTAMP}]`, () => {
+test.describe(`FR-07: Giỏ hàng (Shopping Cart) - Run by: ${STUDENT_ID}`, () => {
 
   for (const tc of testCases) {
     test(`Test Case ${tc.testId}: ${tc.description} - Student ID: ${STUDENT_ID}`, async ({ page }) => {

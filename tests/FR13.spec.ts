@@ -3,9 +3,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 import sqlite3 from 'sqlite3';
 
-// Define Student Identity and Timestamp
+// Define Student Identity
 const STUDENT_ID = process.env.STUDENT_ID || '23127108';
-const TIMESTAMP = process.env.TIMESTAMP || new Date().toISOString();
 
 // Load dynamic test data
 const testDataPath = path.join(__dirname, 'data', 'FR13.json');
@@ -56,7 +55,7 @@ async function loginAsAdmin(page: any, email = 'admin@eshop.com', password = 'Ad
   await page.getByRole('button', { name: 'Login' }).click();
 }
 
-test.describe(`FR-13: Dashboard - Run by: ${STUDENT_ID} - [${TIMESTAMP}]`, () => {
+test.describe(`FR-13: Dashboard - Run by: ${STUDENT_ID}`, () => {
 
   for (const tc of testCases) {
     test(`Test Case ${tc.testId}: ${tc.description} - Student ID: ${STUDENT_ID}`, async ({ page }) => {

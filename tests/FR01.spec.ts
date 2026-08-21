@@ -2,15 +2,14 @@ import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
 
-// Define Student Identity and Timestamp
+// Define Student Identity
 const STUDENT_ID = process.env.STUDENT_ID || '23127108';
-const TIMESTAMP = process.env.TIMESTAMP || new Date().toISOString();
 
 // Load dynamic test data
 const testDataPath = path.join(__dirname, 'data', 'FR01.json');
 const testCases = JSON.parse(fs.readFileSync(testDataPath, 'utf8'));
 
-test.describe(`FR-01: Đăng ký tài khoản - Run by: ${STUDENT_ID} - [${TIMESTAMP}]`, () => {
+test.describe(`FR-01: Đăng ký tài khoản - Run by: ${STUDENT_ID}`, () => {
   
   test.beforeEach(async ({ page }) => {
     // Navigate to the register page before each test
