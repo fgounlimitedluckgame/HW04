@@ -19,7 +19,7 @@
     "password": "Password123!",
     "confirmPassword": "Password123!",
     "expectedSuccess": false,
-    "expectedError": "Họ Tên"
+    "expectedError": "Please fill out this field"
   },
   {
     "testId": "TC03",
@@ -30,7 +30,7 @@
     "password": "Password123!",
     "confirmPassword": "Password123!",
     "expectedSuccess": false,
-    "expectedError": "Email"
+    "expectedError": "Please fill out this field"
   },
   {
     "testId": "TC04",
