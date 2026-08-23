@@ -210,6 +210,7 @@ Lưu ý: Khi chạy tất cả các test case của FR01 trên Playwright, tất
 
 <img width="1920" height="884" alt="Image" src="https://github.com/user-attachments/assets/648dfd8d-f107-4ae2-b986-0c7f39c37363" />
 
+Github issue link: [Issues](https://github.com/fgounlimitedluckgame/HW04/issues)
 
 
 
