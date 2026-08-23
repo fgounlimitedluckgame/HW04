@@ -1,0 +1,6 @@
+# AI Critique
+Trong bài tập HW04 về kiểm thử tự động, em đã sử dụng AI để sinh test data và test script cho các chức năng sau: FR01, FR07, FR13. Sau khi sử dụng, em nhận ra rằng AI có thể tái tạo nhanh test script và sát được khung data-driven, tự chạy Chromium/Firefox/WebKit và sinh HTML report có timestamp.
+
+Về điểm trừ của AI, AI có thể sinh test data mà có thể đi ngược so với đặc tả chức năng, ví dụ: AI đã sinh ra chức năng kiểm tra đăng nhập ở FR13 trong khi toàn bộ chức năng chỉ yêu cầu kiểm thử dashboard. Ngoài ra, AI có thể sinh ra test data dựa trên source code mà không đọc đặc tả vì LLM là một mô hình có xác suất nên LLM có thể phát sinh dữ liệu không đúng theo best practice (đã được fix khi người dùng yêu cầu AI phải sinh test data theo đặc tả và đánh dấu những gì ngược với đặc tả là lỗi). Ngoài ra, việc phân tích kết quả và chỉnh sửa lại cấu hình code là việc phụ thuộc vào con người (ví dụ: AI có thể chạy playwright test trên một số test phụ thuộc vào DB mutation như FR13 và chỉ đưa kết quả chứ không phân tích cấu hình playwright hay code implement như thế nào).
+
+Kết luận, nên sử dụng AI khi ta cần tạo khung sườn cho một dự án, trong khi việc kiểm tra phải có sự xác nhận từ con người. 
