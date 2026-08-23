@@ -62,4 +62,4 @@ Mỗi report có banner `Run by: 23127108` và ISO timestamp để minh chứng.
 | FR-13 | BUG-FR13-001 | Tổng doanh thu bị nhân đôi so với giá trị mong muốn |
 
 ## Demo video 
-- Video link: 
+- Video link: [Demo test chức năng FR13](https://youtu.be/IaPGuSUj4xM)

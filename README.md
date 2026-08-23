@@ -47,8 +47,6 @@
 | 5 | Agent Skills / AI usage documentation | 10 | 10 |
 |  | Tổng | 100 | 100 |
 
-## Cấu Trúc Thư Mục
-
 
 ## Cách Chạy
 
@@ -75,4 +73,6 @@ npm run report
 ## Minh chứng
 
 - Demo video links: 
-- Github: https://github.com/fgounlimitedluckgame/HW04
+* [Demo test chức năng FR13](https://youtu.be/IaPGuSUj4xM)
+* [Demo Agent Skill](https://youtu.be/6YfXPdpX1Vk)
+- Github: [GitHub](https://github.com/fgounlimitedluckgame/HW04)
