@@ -28,10 +28,10 @@ npx playwright test
 
 | Feature | Test case | Browser executions | Pass | Fail | Test case fail duy nhất | Bug unique xác nhận |
 |---|---:|---:|---:|---:|---:|---:|
-| FR-01 | 12 | 36 | 0 | 36 | 12 | 2 |
-| FR-07 | 13 | 36 | 12 | 24 | 8 | 6 |
+| FR-01 | 12 | 36 | 0 | 36 | 12 | 1 |
+| FR-07 | 13 | 36 | 12 | 24 | 8 | 5 |
 | FR-13 | 12 | 36 | 27 | 9 | 3 | 1 |
-| Tổng | 36 | 108 | 39 | 69 | 23 | 9 |
+| Tổng | 36 | 108 | 39 | 69 | 23 | 8 |
 
 ## Report HTML
 `playwright-report-23127108/index.html` (tổng hợp cả 3 lần chạy)
